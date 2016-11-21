@@ -1,0 +1,99 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-menu side="right" [content]="content"> <!--
+  <ion-toolbar secondary>
+    <ion-title>Ressorts</ion-title>
+  </ion-toolbar> -->
+
+  <ion-content> <!--
+    <ion-list>
+      <button menuClose ion-item *ngFor="let feed of feeds" (click)="openFeed(feed)">
+        {{feed.title}}
+      </button>
+    </ion-list>
+    <button ion-button full (click)="addFeed()" action secondary>
+      <ion-icon name="add"></ion-icon> Add Feed
+    </button> -->
+
+
+    <ion-list>
+      <button  ion-item item-right icon-left onclick="window.open('http://www.der-postillon.com/', '_system', 'location=yes');">
+        <h3><ion-icon name="globe"></ion-icon> Postillon.com</h3>
+      </button>
+      <button  ion-item item-right icon-left onclick="window.open('https://www.facebook.com/DerPostillon', '_system', 'location=yes');">
+        <h3><ion-icon name="logo-facebook"></ion-icon> Auf Facebook folgen</h3>
+      </button>
+      <button  ion-item item-right icon-left onclick="window.open('https://plus.google.com/u/0/+postillon', '_system', 'location=yes');">
+        <h3><ion-icon name="logo-googleplus"></ion-icon> Auf Google+ folgen</h3>
+      </button>
+      <button menuClose ion-item item-right icon-left onclick="window.open('http://www.der-postillon.com/p/den-postillon-unterstutzen.html', '_system', 'location=yes');">
+        <h3><ion-icon name="logo-euro"></ion-icon> Postillon unterstützen</h3>
+      </button>
+      <button menuClose ion-item item-right icon-left>
+        <h3><ion-icon name="thumbs-up"></ion-icon> App bewerten</h3>
+      </button>
+      <button menuClose ion-item item-right icon-left onclick="window.open('http://www.der-postillon.com/p/uber-den-postillon.html', '_system', 'location=yes');">
+        <h3><ion-icon name="information-circle"></ion-icon> Impressum</h3>
+      </button>
+
+
+      <ion-item>
+        <ion-label><h3>Bilder laden</h3></ion-label>
+        <ion-toggle checked="true"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><h3>Dyn. Themewechsel</h3></ion-label>
+        <ion-toggle checked="true"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><h3>Pandasexualaktivität</h3></ion-label>
+        <!-- onclik notify Pandaaussterben erfolgreich beschleunigt -->
+        <ion-toggle checked="true" color="secondary"></ion-toggle>
+      </ion-item>
+<!--
+        <ion-segment [(ngModel)]="bilderladen" ion-item>
+          <ion-label>Theme</ion-label>
+          <form [formGroup]="myForm2">
+     <ion-segment formControlName="mapStyle" color="danger">
+       <ion-segment-button value="an">
+         An
+       </ion-segment-button>
+       <ion-segment-button value="aus">
+         Aus
+       </ion-segment-button>
+     </ion-segment>
+
+
+
+
+    <ion-segment [(ngModel)]="themeeinstellung">
+      <ion-label>Theme</ion-label>
+        <form [formGroup]="myForm2">
+   <ion-segment formControlName="mapStyle" color="danger">
+        <ion-segment-button value="hell">
+          Hell
+        </ion-segment-button>
+        <ion-segment-button value="dynamisch">
+          Auto
+        </ion-segment-button>
+        <ion-segment-button value="dunkel">
+          Dunkel
+        </ion-segment-button>
+      </ion-segment>
+-->
+    </ion-list>
+
+
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
